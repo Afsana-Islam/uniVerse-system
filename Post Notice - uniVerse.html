@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)http://localhost/uniVerse/post_notice.php -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Post Notice - uniVerse</title>
+    <link href="./Post Notice - uniVerse_files/tailwind.min.css" rel="stylesheet">
+    <link href="./Post Notice - uniVerse_files/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 min-h-screen">
+    
+<nav class="bg-gradient-to-r from-blue-800 to-purple-800 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+            <!-- Left side - Logo and main navigation -->
+            <div class="flex items-center">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-white text-xl font-bold">
+                        <i class="fas fa-shield-alt mr-2"></i>uniVerse Admin
+                    </span>
+                </div>
+
+                <!-- Main navigation links -->
+                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-4">
+                    <a href="http://localhost/uniVerse/dashboard_admin.php" class="px-3 py-2 rounded-md text-sm font-medium transition duration-200 
+                              text-blue-100 hover:bg-blue-700 hover:text-white">
+                        <i class="fas fa-tachometer-alt mr-1"></i>Dashboard
+                    </a>
+
+                    <a href="http://localhost/uniVerse/universities.php" class="px-3 py-2 rounded-md text-sm font-medium transition duration-200 
+                              text-blue-100 hover:bg-blue-700 hover:text-white">
+                        <i class="fas fa-university mr-1"></i>Universities
+                    </a>
+
+                    <a href="http://localhost/uniVerse/students.php" class="px-3 py-2 rounded-md text-sm font-medium transition duration-200 
+                              text-blue-100 hover:bg-blue-700 hover:text-white">
+                        <i class="fas fa-users mr-1"></i>Students
+                    </a>
+
+                    <a href="http://localhost/uniVerse/post_notice.php" class="px-3 py-2 rounded-md text-sm font-medium transition duration-200 
+                              bg-blue-700 text-white">
+                        <i class="fas fa-bullhorn mr-1"></i>Notices
+                    </a>
+
+                    <a href="http://localhost/uniVerse/system_settings.php" class="px-3 py-2 rounded-md text-sm font-medium transition duration-200 
+                              text-blue-100 hover:bg-blue-700 hover:text-white">
+                        <i class="fas fa-cog mr-1"></i>Settings
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right side - User menu and logout -->
+            <div class="flex items-center">
+                <!-- Notifications (optional) -->
+                <div class="hidden md:ml-4 md:flex md:items-center">
+                    <div class="relative">
+                        <button class="p-1 text-blue-200 hover:text-white focus:outline-none">
+                            <i class="fas fa-bell h-6 w-6"></i>
+                            <!-- Notification badge -->
+                            <span class="absolute top-0 right-0 block h-2 w-2 rounded-full bg-red-500"></span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- User menu -->
+                <div class="ml-3 relative">
+                    <div class="flex items-center space-x-3">
+                        <!-- User avatar -->
+                        <div class="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold">
+                            A                        </div>
+                        
+                        <!-- User info -->
+                        <div class="hidden md:block">
+                            <div class="text-sm font-medium text-white">Afsana</div>
+                            <div class="text-xs text-blue-200">Administrator</div>
+                        </div>
+
+                        <!-- Logout button -->
+                        <a href="http://localhost/uniVerse/logout.php" class="bg-red-600 hover:bg-red-700 text-white px-3 py-2 rounded-md text-sm font-medium transition duration-200 ml-4">
+                            <i class="fas fa-sign-out-alt mr-1"></i>Logout
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center ml-4">
+                    <button type="button" class="text-blue-200 hover:text-white focus:outline-none" id="mobile-menu-button">
+                        <i class="fas fa-bars h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="md:hidden hidden" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1 bg-blue-700">
+            <a href="http://localhost/uniVerse/dashboard_admin.php" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-blue-600 transition duration-200">
+                <i class="fas fa-tachometer-alt mr-2"></i>Dashboard
+            </a>
+
+            <a href="http://localhost/uniVerse/universities.php" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-blue-600 transition duration-200">
+                <i class="fas fa-university mr-2"></i>Universities
+            </a>
+
+            <a href="http://localhost/uniVerse/students.php" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-blue-600 transition duration-200">
+                <i class="fas fa-users mr-2"></i>Students
+            </a>
+
+            <a href="http://localhost/uniVerse/post_notice.php" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-blue-600 transition duration-200">
+                <i class="fas fa-bullhorn mr-2"></i>Notices
+            </a>
+
+            <a href="http://localhost/uniVerse/system_settings.php" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-blue-600 transition duration-200">
+                <i class="fas fa-cog mr-2"></i>Settings
+            </a>
+
+            <div class="border-t border-blue-600 pt-2 mt-2">
+                <a href="http://localhost/uniVerse/logout.php" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-red-600 transition duration-200">
+                    <i class="fas fa-sign-out-alt mr-2"></i>Logout
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Mobile menu JavaScript -->
+<script>
+document.getElementById('mobile-menu-button').addEventListener('click', function() {
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenu.classList.toggle('hidden');
+});
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', function(event) {
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuButton = document.getElementById('mobile-menu-button');
+    
+    if (!mobileMenu.contains(event.target) && !menuButton.contains(event.target)) {
+        mobileMenu.classList.add('hidden');
+    }
+});
+</script>
+
+<!-- Font Awesome for icons -->
+<link href="./Post Notice - uniVerse_files/all.min.css" rel="stylesheet">
+
+<style>
+/* Smooth transitions for mobile menu */
+#mobile-menu {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Active state highlighting */
+nav a.active {
+    background-color: #1e40af;
+    color: white;
+}
+</style>    
+    <div class="max-w-4xl mx-auto px-4 py-8">
+        <div class="bg-white rounded-xl shadow-lg p-6">
+            <h1 class="text-2xl font-bold text-gray-800 mb-6">📢 Post Notice</h1>
+
+                        
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Notice Form -->
+                <div>
+                    <form method="POST" class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Notice Title *</label>
+                            <input type="text" name="title" required="" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500" placeholder="Important Announcement">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Message *</label>
+                            <textarea name="message" rows="5" required="" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500" placeholder="Write your important message here..."></textarea>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Notice Type</label>
+                            <select name="notice_type" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+                                <option value="general">General Announcement</option>
+                                <option value="maintenance">Maintenance Alert</option>
+                                <option value="update">System Update</option>
+                                <option value="important">Important Notice</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Target Audience *</label>
+                            <div class="space-y-2">
+                                <label class="flex items-center">
+                                    <input type="checkbox" name="target_audience[]" value="all" class="mr-2" checked="">
+                                    <span>All Users (Students &amp; Universities)</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" name="target_audience[]" value="students" class="mr-2">
+                                    <span>Students Only</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" name="target_audience[]" value="universities" class="mr-2">
+                                    <span>Universities Only</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center">
+                            <input type="checkbox" name="is_urgent" id="is_urgent" class="mr-2">
+                            <label for="is_urgent" class="text-sm font-medium text-gray-700">
+                                Mark as Urgent (High Priority)
+                            </label>
+                        </div>
+
+                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-medium transition">
+                            📢 Post Notice
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Recent Notices -->
+                <div>
+                    <h2 class="text-xl font-semibold text-gray-800 mb-4">📋 Recent Notices</h2>
+                    
+                    <div class="space-y-4 max-h-96 overflow-y-auto">
+                                                                                    <div class="border border-gray-200 rounded-lg p-4 
+                                    bg-gray-50">
+                                    
+                                    <div class="flex justify-between items-start mb-2">
+                                        <h3 class="font-semibold text-gray-800">system update notice</h3>
+                                                                            </div>
+                                    
+                                    <p class="text-sm text-gray-700 mb-3">hchhh</p>
+                                    
+                                    <div class="flex justify-between items-center text-xs text-gray-500">
+                                        <span>Maintenance • To: all</span>
+                                        <span>Aug 23, 2025 12:39 PM</span>
+                                    </div>
+                                </div>
+                                                            <div class="border border-gray-200 rounded-lg p-4 
+                                    bg-gray-50">
+                                    
+                                    <div class="flex justify-between items-start mb-2">
+                                        <h3 class="font-semibold text-gray-800">ls,ls,</h3>
+                                                                            </div>
+                                    
+                                    <p class="text-sm text-gray-700 mb-3">uhdhdbd</p>
+                                    
+                                    <div class="flex justify-between items-center text-xs text-gray-500">
+                                        <span>Update • To: all</span>
+                                        <span>Aug 22, 2025 4:10 AM</span>
+                                    </div>
+                                </div>
+                                                                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body></html>

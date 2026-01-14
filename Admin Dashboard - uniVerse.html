@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)http://localhost/uniVerse/dashboard_admin.php -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Admin Dashboard - uniVerse</title>
+    <link href="./Admin Dashboard - uniVerse_files/tailwind.min.css" rel="stylesheet">
+    <link href="./Admin Dashboard - uniVerse_files/all.min.css" rel="stylesheet">
+    <script src="./Admin Dashboard - uniVerse_files/chart.js.download"></script>
+</head>
+<body class="bg-gray-50 min-h-screen">
+
+<!-- Navbar -->
+<nav class="bg-gradient-to-r from-blue-800 to-purple-800 p-4 shadow-lg">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <h1 class="text-xl font-bold text-white flex items-center">
+            <i class="fas fa-shield-alt mr-2"></i>uniVerse Admin Panel
+        </h1>
+        <div class="flex items-center space-x-4">
+            <a href="http://localhost/uniVerse/dashboard_admin.php" class="text-white hover:text-blue-200 px-3 py-2 rounded transition">
+                <i class="fas fa-tachometer-alt mr-1"></i>Dashboard
+            </a>
+            <a href="http://localhost/uniVerse/universities.php" class="text-white hover:text-blue-200 px-3 py-2 rounded transition">
+                <i class="fas fa-university mr-1"></i>Universities
+            </a>
+            <a href="http://localhost/uniVerse/students.php" class="text-white hover:text-blue-200 px-3 py-2 rounded transition">
+                <i class="fas fa-users mr-1"></i>Students
+            </a>
+            <a href="http://localhost/uniVerse/post_notice.php" class="text-white hover:text-blue-200 px-3 py-2 rounded transition">
+                <i class="fas fa-bullhorn mr-1"></i>Notices
+            </a>
+            <a href="http://localhost/uniVerse/system_settings.php" class="text-white hover:text-blue-200 px-3 py-2 rounded transition">
+                <i class="fas fa-cog mr-1"></i>Settings
+            </a>
+            <a href="http://localhost/uniVerse/logout.php" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded transition">
+                <i class="fas fa-sign-out-alt mr-1"></i>Logout
+            </a>
+        </div>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<div class="max-w-7xl mx-auto px-4 py-6">
+    <!-- Welcome Header -->
+    <div class="bg-white rounded-xl shadow-sm p-6 mb-6">
+        <h1 class="text-2xl font-bold text-gray-800 mb-2">Admin Dashboard 👋</h1>
+        <p class="text-gray-600">Manage the uniVerse platform and monitor activity</p>
+    </div>
+
+    <!-- Statistics Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-8">
+        <!-- Total Universities -->
+        <div class="bg-white rounded-xl shadow-sm p-6 border-l-4 border-blue-500">
+            <div class="flex items-center">
+                <div class="p-3 bg-blue-100 rounded-lg mr-4">
+                    <i class="fas fa-university text-blue-600 text-xl"></i>
+                </div>
+                <div>
+                    <h3 class="text-sm font-medium text-gray-600">Total Universities</h3>
+                    <p class="text-2xl font-bold text-gray-900">3</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Total Students -->
+        <div class="bg-white rounded-xl shadow-sm p-6 border-l-4 border-green-500">
+            <div class="flex items-center">
+                <div class="p-3 bg-green-100 rounded-lg mr-4">
+                    <i class="fas fa-users text-green-600 text-xl"></i>
+                </div>
+                <div>
+                    <h3 class="text-sm font-medium text-gray-600">Total Students</h3>
+                    <p class="text-2xl font-bold text-gray-900">4</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pending Approvals -->
+        <div class="bg-white rounded-xl shadow-sm p-6 border-l-4 border-yellow-500">
+            <div class="flex items-center">
+                <div class="p-3 bg-yellow-100 rounded-lg mr-4">
+                    <i class="fas fa-clock text-yellow-600 text-xl"></i>
+                </div>
+                <div>
+                    <h3 class="text-sm font-medium text-gray-600">Pending Approvals</h3>
+                    <p class="text-2xl font-bold text-gray-900">0</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Total Posts -->
+        <div class="bg-white rounded-xl shadow-sm p-6 border-l-4 border-purple-500">
+            <div class="flex items-center">
+                <div class="p-3 bg-purple-100 rounded-lg mr-4">
+                    <i class="fas fa-newspaper text-purple-600 text-xl"></i>
+                </div>
+                <div>
+                    <h3 class="text-sm font-medium text-gray-600">Total Posts</h3>
+                    <p class="text-2xl font-bold text-gray-900">7</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Total Follows -->
+        <div class="bg-white rounded-xl shadow-sm p-6 border-l-4 border-pink-500">
+            <div class="flex items-center">
+                <div class="p-3 bg-pink-100 rounded-lg mr-4">
+                    <i class="fas fa-heart text-pink-600 text-xl"></i>
+                </div>
+                <div>
+                    <h3 class="text-sm font-medium text-gray-600">Total Follows</h3>
+                    <p class="text-2xl font-bold text-gray-900">4</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- NEW: Top Universities Section -->
+    <div class="bg-white rounded-xl shadow-sm p-6 mb-8">
+        <div class="flex items-center justify-between mb-6">
+            <h2 class="text-xl font-semibold text-gray-800">
+                <i class="fas fa-trophy text-yellow-500 mr-2"></i>Top Universities by Followers
+            </h2>
+            <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">
+                Top 10 Ranking
+            </span>
+        </div>
+
+        <div class="overflow-x-auto">
+            <table class="w-full table-auto">
+                <thead class="bg-gray-50">
+                    <tr>
+                        <th class="px-4 py-3 text-left text-sm font-medium text-gray-700">Rank</th>
+                        <th class="px-4 py-3 text-left text-sm font-medium text-gray-700">University</th>
+                        <th class="px-4 py-3 text-left text-sm font-medium text-gray-700">Location</th>
+                        <th class="px-4 py-3 text-left text-sm font-medium text-gray-700">Followers</th>
+                        <th class="px-4 py-3 text-left text-sm font-medium text-gray-700">Posts</th>
+                        <th class="px-4 py-3 text-left text-sm font-medium text-gray-700">Engagement</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+                                                                        <tr class="hover:bg-gray-50 transition duration-150">
+                                <!-- Rank -->
+                                <td class="px-4 py-4 text-center">
+                                    <div class="w-8 h-8 flex items-center justify-center rounded-full 
+                                        bg-yellow-100 text-yellow-800 
+                                        font-bold text-sm">
+                                        1                                    </div>
+                                </td>
+
+                                <!-- University Info -->
+                                <td class="px-4 py-4">
+                                    <div class="flex items-center">
+                                        <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                                            B                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900">BRAC UNIVERSITY</div>
+                                            <div class="text-sm text-gray-600">brac@gmail.com</div>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <!-- Location -->
+                                <td class="px-4 py-4 text-sm text-gray-900">
+                                    Dhaka, Bangladesh                                </td>
+
+                                <!-- Followers -->
+                                <td class="px-4 py-4">
+                                    <div class="flex items-center">
+                                        <div class="w-16 bg-gray-200 rounded-full h-2 mr-2">
+                                            <div class="bg-blue-600 h-2 rounded-full" style="width: 100%">
+                                            </div>
+                                        </div>
+                                        <span class="text-sm font-semibold text-blue-600">
+                                            2                                        </span>
+                                    </div>
+                                </td>
+
+                                <!-- Posts -->
+                                <td class="px-4 py-4 text-sm text-gray-900">
+                                    2 posts
+                                </td>
+
+                                <!-- Engagement Rate -->
+                                <td class="px-4 py-4">
+                                                                        <span class="px-2 py-1 rounded-full text-xs font-medium 
+                                        bg-green-100 text-green-800">
+                                        100% engagement
+                                    </span>
+                                </td>
+                            </tr>
+                                                    <tr class="hover:bg-gray-50 transition duration-150">
+                                <!-- Rank -->
+                                <td class="px-4 py-4 text-center">
+                                    <div class="w-8 h-8 flex items-center justify-center rounded-full 
+                                        bg-gray-100 text-gray-800 
+                                        font-bold text-sm">
+                                        2                                    </div>
+                                </td>
+
+                                <!-- University Info -->
+                                <td class="px-4 py-4">
+                                    <div class="flex items-center">
+                                        <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                                            I                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900">Independent University, Bangladesh</div>
+                                            <div class="text-sm text-gray-600">iub@example.com</div>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <!-- Location -->
+                                <td class="px-4 py-4 text-sm text-gray-900">
+                                    Bashundhara, Dhaka, Bangladesh                                </td>
+
+                                <!-- Followers -->
+                                <td class="px-4 py-4">
+                                    <div class="flex items-center">
+                                        <div class="w-16 bg-gray-200 rounded-full h-2 mr-2">
+                                            <div class="bg-blue-600 h-2 rounded-full" style="width: 100%">
+                                            </div>
+                                        </div>
+                                        <span class="text-sm font-semibold text-blue-600">
+                                            2                                        </span>
+                                    </div>
+                                </td>
+
+                                <!-- Posts -->
+                                <td class="px-4 py-4 text-sm text-gray-900">
+                                    2 posts
+                                </td>
+
+                                <!-- Engagement Rate -->
+                                <td class="px-4 py-4">
+                                                                        <span class="px-2 py-1 rounded-full text-xs font-medium 
+                                        bg-green-100 text-green-800">
+                                        100% engagement
+                                    </span>
+                                </td>
+                            </tr>
+                                                    <tr class="hover:bg-gray-50 transition duration-150">
+                                <!-- Rank -->
+                                <td class="px-4 py-4 text-center">
+                                    <div class="w-8 h-8 flex items-center justify-center rounded-full 
+                                        bg-orange-100 text-orange-800 
+                                        font-bold text-sm">
+                                        3                                    </div>
+                                </td>
+
+                                <!-- University Info -->
+                                <td class="px-4 py-4">
+                                    <div class="flex items-center">
+                                        <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                                            U                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900">United Internatinal University</div>
+                                            <div class="text-sm text-gray-600">uiu@example.com</div>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <!-- Location -->
+                                <td class="px-4 py-4 text-sm text-gray-900">
+                                    Dhaka, Bangladesh                                </td>
+
+                                <!-- Followers -->
+                                <td class="px-4 py-4">
+                                    <div class="flex items-center">
+                                        <div class="w-16 bg-gray-200 rounded-full h-2 mr-2">
+                                            <div class="bg-blue-600 h-2 rounded-full" style="width: 0%">
+                                            </div>
+                                        </div>
+                                        <span class="text-sm font-semibold text-blue-600">
+                                            0                                        </span>
+                                    </div>
+                                </td>
+
+                                <!-- Posts -->
+                                <td class="px-4 py-4 text-sm text-gray-900">
+                                    0 posts
+                                </td>
+
+                                <!-- Engagement Rate -->
+                                <td class="px-4 py-4">
+                                                                        <span class="px-2 py-1 rounded-full text-xs font-medium 
+                                        bg-red-100 text-red-800">
+                                        0% engagement
+                                    </span>
+                                </td>
+                            </tr>
+                                                            </tbody>
+            </table>
+        </div>
+
+                    <div class="mt-6 pt-4 border-t border-gray-200">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="text-center p-3 bg-blue-50 rounded-lg">
+                        <div class="text-2xl font-bold text-blue-600">2</div>
+                        <div class="text-sm text-blue-800">Top University Followers</div>
+                        <div class="text-xs text-blue-600">BRAC UNIVERSITY</div>
+                    </div>
+                    
+                    <div class="text-center p-3 bg-green-50 rounded-lg">
+                        <div class="text-2xl font-bold text-green-600">
+                            4                        </div>
+                        <div class="text-sm text-green-800">Total Top 10 Followers</div>
+                    </div>
+                    
+                    <div class="text-center p-3 bg-purple-50 rounded-lg">
+                        <div class="text-2xl font-bold text-purple-600">
+                            100%
+                        </div>
+                        <div class="text-sm text-purple-800">Market Share</div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+    <!-- Main Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <!-- Pending Approvals Card -->
+        <div class="bg-white rounded-xl shadow-sm p-6">
+            <div class="flex items-center justify-between mb-4">
+                <h2 class="text-xl font-semibold text-gray-800">
+                    <i class="fas fa-clock text-yellow-500 mr-2"></i>Pending Approvals
+                </h2>
+                <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">
+                    0 pending
+                </span>
+            </div>
+
+                            <div class="text-center py-8 text-gray-500">
+                    <i class="fas fa-check-circle text-3xl mb-3"></i>
+                    <p>No pending approvals</p>
+                </div>
+                    </div>
+
+        <!-- Platform Statistics Card -->
+        <div class="bg-white rounded-xl shadow-sm p-6">
+            <h2 class="text-xl font-semibold text-gray-800 mb-4">
+                <i class="fas fa-chart-bar text-blue-500 mr-2"></i>Platform Statistics
+            </h2>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-blue-50 p-4 rounded-lg">
+                    <div class="text-2xl font-bold text-blue-600">4</div>
+                    <div class="text-sm text-gray-600">Total Follows</div>
+                </div>
+                <div class="bg-green-50 p-4 rounded-lg">
+                    <div class="text-2xl font-bold text-green-600">0</div>
+                    <div class="text-sm text-gray-600">Student Signups (7 days)</div>
+                </div>
+                <div class="bg-purple-50 p-4 rounded-lg">
+                    <div class="text-2xl font-bold text-purple-600">0</div>
+                    <div class="text-sm text-gray-600">University Signups (7 days)</div>
+                </div>
+                <div class="bg-yellow-50 p-4 rounded-lg">
+                    <div class="text-2xl font-bold text-yellow-600">0</div>
+                    <div class="text-sm text-gray-600">Pending Reviews</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body></html>

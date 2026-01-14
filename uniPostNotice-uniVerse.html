@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)http://localhost/uniVerse/university_post_notice.php -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Post Notice - uniVerse</title>
+    <link href="./uniPostNotice-uniVerse_files/tailwind.min.css" rel="stylesheet">
+    <link href="./uniPostNotice-uniVerse_files/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <nav class="bg-gradient-to-r from-blue-700 to-purple-700 text-white px-6 py-4 shadow-lg">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <div class="text-xl font-bold flex items-center">
+            <i class="fas fa-university mr-2"></i> uniVerse University
+        </div>
+        
+        <div class="flex items-center space-x-6">
+            <a href="http://localhost/uniVerse/dashboard_university.php" class="hover:text-blue-200 transition px-3 py-2 rounded-lg hover:bg-blue-600">
+                <i class="fas fa-tachometer-alt mr-1"></i> Dashboard
+            </a>
+            
+            <a href="http://localhost/uniVerse/university_profile_update.php" class="hover:text-blue-200 transition px-3 py-2 rounded-lg hover:bg-blue-600">
+                <i class="fas fa-edit mr-1"></i> Update Profile
+            </a>
+            
+            <a href="http://localhost/uniVerse/university_post_admission.php" class="hover:text-blue-200 transition px-3 py-2 rounded-lg hover:bg-blue-600">
+                <i class="fas fa-graduation-cap mr-1"></i> Admissions
+            </a>
+            
+            <a href="http://localhost/uniVerse/university_post_notice.php" class="hover:text-blue-200 transition px-3 py-2 rounded-lg hover:bg-blue-600">
+                <i class="fas fa-bullhorn mr-1"></i> Notices
+            </a>
+            
+            <a href="http://localhost/uniVerse/university_alumni.php" class="hover:text-blue-200 transition px-3 py-2 rounded-lg hover:bg-blue-600">
+                <i class="fas fa-users mr-1"></i> Alumni
+            </a>
+            
+            <a href="http://localhost/uniVerse/university_chatbot.php" class="hover:text-blue-200 transition px-3 py-2 rounded-lg hover:bg-blue-600">
+                <i class="fas fa-robot mr-1"></i> Chatbot
+            </a>
+            
+            <a href="http://localhost/uniVerse/logout.php" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg transition">
+                <i class="fas fa-sign-out-alt mr-1"></i> Logout
+            </a>
+        </div>
+    </div>
+</nav>
+    <div class="max-w-4xl mx-auto px-4 py-8">
+        <!-- Header -->
+        <div class="bg-gradient-to-r from-orange-500 to-green-600 rounded-xl p-6 text-blue mb-8 shadow-lg">
+            <h1 class="text-3xl font-bold mb-2">📢 Post Notice</h1>
+            <p class="text-orange-100">Share important announcements with your students</p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-8">
+            <!-- Create Notice Form -->
+            <div class="bg-white rounded-xl shadow-lg p-6">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">✍️ Create New Notice</h2>
+                
+                                
+                
+                <form method="POST" class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Title *</label>
+                        <input type="text" name="title" required="" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500" placeholder="Important Announcement">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Message *</label>
+                        <textarea name="message" rows="4" required="" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500" placeholder="Write your important message here..."></textarea>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Priority</label>
+                            <select name="priority" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+                                <option value="normal">Normal</option>
+                                <option value="important">Important</option>
+                                <option value="urgent">Urgent</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Expiry Date</label>
+                            <input type="date" name="expiry_date" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="w-full bg-blue-600 hover:bg-orange-700 text-white py-3 rounded-lg font-medium transition">
+                        📢 Post Notice
+                    </button>
+                </form>
+            </div>
+
+            <!-- Existing Notices -->
+            <div class="bg-white rounded-xl shadow-lg p-6">
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="text-xl font-semibold text-gray-800">📋 Active Notices</h2>
+                    <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-sm">
+                        4 notices
+                    </span>
+                </div>
+
+                <div class="space-y-4">
+                                                                        <div class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition 
+                                ">
+                                
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3 class="font-semibold text-gray-800">Club Recruitment Drive</h3>
+                                    <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">
+                                        Normal                                    </span>
+                                </div>
+                                
+                                <p class="text-gray-700 mb-3">📢 BRAC University Computer Club (BUCC) is opening recruitment for Fall 2024!<br>
+Interested students can apply online through the official portal.<br>
+👉 Deadline: September 10, 2024<br>
+Don’t miss the chance to be part of exciting tech events, workshops, and competitions!</p>
+                                
+                                <div class="flex justify-between items-center text-sm text-gray-500">
+                                    <span>Posted Aug 21, 2025 6:58 PM</span>
+                                                                            <span>Expires: Sep 6, 2025</span>
+                                                                    </div>
+                            </div>
+                                                    <div class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition 
+                                ">
+                                
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3 class="font-semibold text-gray-800">Club Recruitment Drive</h3>
+                                    <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">
+                                        Normal                                    </span>
+                                </div>
+                                
+                                <p class="text-gray-700 mb-3">📢 BRAC University Computer Club (BUCC) is opening recruitment for Fall 2024!<br>
+Interested students can apply online through the official portal.<br>
+👉 Deadline: September 10, 2024<br>
+Don’t miss the chance to be part of exciting tech events, workshops, and competitions!</p>
+                                
+                                <div class="flex justify-between items-center text-sm text-gray-500">
+                                    <span>Posted Aug 21, 2025 6:57 PM</span>
+                                                                            <span>Expires: Sep 6, 2025</span>
+                                                                    </div>
+                            </div>
+                                                    <div class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition 
+                                ">
+                                
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3 class="font-semibold text-gray-800">Club Recruitment Drive</h3>
+                                    <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">
+                                        Normal                                    </span>
+                                </div>
+                                
+                                <p class="text-gray-700 mb-3">📢 BRAC University Computer Club (BUCC) is opening recruitment for Fall 2024!<br>
+Interested students can apply online through the official portal.<br>
+👉 Deadline: September 10, 2024<br>
+Don’t miss the chance to be part of exciting tech events, workshops, and competitions!</p>
+                                
+                                <div class="flex justify-between items-center text-sm text-gray-500">
+                                    <span>Posted Aug 21, 2025 6:57 PM</span>
+                                                                            <span>Expires: Sep 6, 2025</span>
+                                                                    </div>
+                            </div>
+                                                    <div class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition 
+                                ">
+                                
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3 class="font-semibold text-gray-800">Club Recruitment Drive</h3>
+                                    <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">
+                                        Normal                                    </span>
+                                </div>
+                                
+                                <p class="text-gray-700 mb-3">📢 BRAC University Computer Club (BUCC) is opening recruitment for Fall 2024!<br>
+Interested students can apply online through the official portal.<br>
+👉 Deadline: September 10, 2024<br>
+Don’t miss the chance to be part of exciting tech events, workshops, and competitions!</p>
+                                
+                                <div class="flex justify-between items-center text-sm text-gray-500">
+                                    <span>Posted Aug 21, 2025 6:55 PM</span>
+                                                                            <span>Expires: Sep 6, 2025</span>
+                                                                    </div>
+                            </div>
+                                                            </div>
+            </div>
+        </div>
+    </div>
+
+</body></html>

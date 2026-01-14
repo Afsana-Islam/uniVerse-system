@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)http://localhost/uniVerse/university_profile_update.php -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Update Profile - uniVerse</title>
+    <link href="./universityUpdateProfile-uniVerse_files/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <nav class="bg-gradient-to-r from-blue-700 to-purple-700 text-white px-6 py-4 shadow-lg">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <div class="text-xl font-bold flex items-center">
+            <i class="fas fa-university mr-2"></i> uniVerse University
+        </div>
+        
+        <div class="flex items-center space-x-6">
+            <a href="http://localhost/uniVerse/dashboard_university.php" class="hover:text-blue-200 transition px-3 py-2 rounded-lg hover:bg-blue-600">
+                <i class="fas fa-tachometer-alt mr-1"></i> Dashboard
+            </a>
+            
+            <a href="http://localhost/uniVerse/university_profile_update.php" class="hover:text-blue-200 transition px-3 py-2 rounded-lg hover:bg-blue-600">
+                <i class="fas fa-edit mr-1"></i> Update Profile
+            </a>
+            
+            <a href="http://localhost/uniVerse/university_post_admission.php" class="hover:text-blue-200 transition px-3 py-2 rounded-lg hover:bg-blue-600">
+                <i class="fas fa-graduation-cap mr-1"></i> Admissions
+            </a>
+            
+            <a href="http://localhost/uniVerse/university_post_notice.php" class="hover:text-blue-200 transition px-3 py-2 rounded-lg hover:bg-blue-600">
+                <i class="fas fa-bullhorn mr-1"></i> Notices
+            </a>
+            
+            <a href="http://localhost/uniVerse/university_alumni.php" class="hover:text-blue-200 transition px-3 py-2 rounded-lg hover:bg-blue-600">
+                <i class="fas fa-users mr-1"></i> Alumni
+            </a>
+            
+            <a href="http://localhost/uniVerse/university_chatbot.php" class="hover:text-blue-200 transition px-3 py-2 rounded-lg hover:bg-blue-600">
+                <i class="fas fa-robot mr-1"></i> Chatbot
+            </a>
+            
+            <a href="http://localhost/uniVerse/logout.php" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg transition">
+                <i class="fas fa-sign-out-alt mr-1"></i> Logout
+            </a>
+        </div>
+    </div>
+</nav>
+    <div class="max-w-4xl mx-auto p-6">
+        <div class="bg-white rounded-xl shadow-lg p-6">
+            <h1 class="text-2xl font-bold text-gray-800 mb-6">🏫 Update University Profile</h1>
+
+                        
+            
+            <form method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Basic Information -->
+                <div class="md:col-span-2">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-4">📋 Basic Information</h3>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">University Name *</label>
+                    <input type="text" name="name" value="BRAC UNIVERSITY" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500" required="">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Website URL</label>
+                    <input type="url" name="website" value="" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500" placeholder="https://example.com">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Location *</label>
+                    <input type="text" name="location" value="Dhaka, Bangladesh" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500" required="" placeholder="City, Country">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Total Students</label>
+                    <input type="number" name="total_students" value="12000" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500" placeholder="5000">
+                </div>
+
+                <!-- Academic Information -->
+                <div class="md:col-span-2">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-4 mt-6">🎓 Academic Information</h3>
+                </div>
+
+                <div class="md:col-span-2">
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Departments *</label>
+                    <textarea name="departments" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500" required="" placeholder="Computer Science, Engineering, Business Administration...">Computer Science and Engineering, Electrical and Electronic Engineering, Business Administration, Economics and Social Sciences, English and Humanities, Architecture, Law, Pharmacy, Mathematics and Natural Sciences, Public Health, Education and Development</textarea>
+                    <p class="text-sm text-gray-500 mt-1">Separate departments with commas</p>
+                </div>
+
+                <div class="md:col-span-2">
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Scholarship Information</label>
+                    <textarea name="scholarship" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500" placeholder="Merit-based scholarships, Financial aid options..."></textarea>
+                </div>
+
+                <div class="md:col-span-2">
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Application Process</label>
+                    <textarea name="application_process" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500" placeholder="Step-by-step application process...">Visit admissions.bracu.ac.bd
+
+Create an applicant profile
+
+Select program of choice and complete online form
+
+Upload required academic documents
+
+Pay application fee online (bKash, card, Rocket, etc.)
+
+Sit for admission test/interview (if required)
+
+Receive admission result via portal/email
+
+Complete enrollment and registration</textarea>
+                </div>
+
+                <div class="md:col-span-2">
+                    <label class="block text-sm font-medium text-gray-700 mb-2">University Summary</label>
+                    <textarea name="summary" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500" placeholder="Brief description of your university...">BRAC University, established in 2001, is a leading private university in Bangladesh with a strong focus on excellence in education, research, and innovation. The university offers diverse undergraduate and postgraduate programs across science, engineering, business, law, and the humanities. With a student-centered learning approach, international collaborations, and extensive scholarship opportunities, BRAC University aims to foster leadership, creativity, and global citizenship.</textarea>
+                </div>
+
+                <div class="md:col-span-2 flex gap-4">
+                    <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium">
+                        💾 Save Changes
+                    </button>
+                    <a href="http://localhost/uniVerse/dashboard_university.php" class="bg-gray-500 hover:bg-gray-600 text-white px-6 py-3 rounded-lg font-medium">
+                        ← Back to Dashboard
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body></html>
